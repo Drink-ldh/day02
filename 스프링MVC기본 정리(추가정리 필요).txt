@@ -1,0 +1,49 @@
+
+요청(View)
+Controller(Controller)
+Service, Dao, DB(Model)
+
+
+
+
+1. 요청 발생(Parameter 발생) / 클라이언트
+	1개면 String
+	여러개면 Map으로 받는다
+
+
+2. 컨트롤러(처리)
+	@Controller로 객체화
+	서비스의 메소드를 사용해야 한다.
+	@Autowired로 가져옴(객체화된 서비스(implement))	
+	
+
+3. 서비스(기능)
+	인터페이스 요청 / implement에서 구체화된 기능 구현
+	implement에 @service 표기시 객체화
+	컨트롤러에서 @Autowired로 가져올수 있게됨
+	
+
+4. DAO(DB작업)  ==> Mapper
+	@Repository 를 통해 객체화 / 메모리에 올리기
+	
+	DB작업시 XML이용
+
+5. DB
+
+
+
+6. DAO(XML과 DB, DAO가 연결되어있음)
+	
+
+
+7. 서비스
+	@Autowired로 가져옴(이전것)
+
+
+8. 컨트롤러
+	@Autowired로 가져옴(이전것)
+
+	리턴 또는 생성된 데이터를 View로 보낼때 
+	ModelAndView, Model, String, JSON 을 통해 보내줄 수 있음
+
+9. 클라이언트
